@@ -117,7 +117,8 @@ class App extends Component {
     let obj = {};
     obj[cat] = categoryNew;
     console.log('Obj ' + obj);
-    this.setState(obj,this.updateList);  
+    
+   // this.setState(obj,this.updateList);  
   };
 
  /* filterDropdown = this.results.filter(function(result) {
