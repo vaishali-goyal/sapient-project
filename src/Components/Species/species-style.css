@@ -1,0 +1,50 @@
+.Species-wrapper {
+    padding: 15px;
+}
+.species-tiles {
+    border-radius: 4px;
+    color: #ffffff;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.species-tiles ul, .species-tiles li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.species-tiles li:last-child {
+    border: none;
+}
+
+.species-image-wrapper, .species-image-wrapper img{
+    width: 100%;
+    position: relative;
+}
+
+.species-details {
+    position: absolute;
+    bottom: 0;
+    background: #000;
+    opacity: 0.8;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+.species-list-wrapper {
+    background: #333333;
+    padding: 20px 10px;
+}
+
+.species-list-wrapper li {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #ffffff;
+}
+.species-list-wrapper li .align-right {
+    text-align: right;
+    padding-left: 10px;
+    color: #ff9900;
+}
