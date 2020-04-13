@@ -34,7 +34,7 @@ const Filters = (props) => {
                             
                             <div key={index} className="form-group">
                                 <div className="form-check">                
-                                    <input type="checkbox" value={result} className="form-check-input" id={result} onChange={props.updateFilter} checked={props.filters[result]} />
+                                    <input type="checkbox" value={props.category} className="form-check-input" id={result} onChange={props.updateFilter} checked={props.filters[result]} />
                                     <label className="form-check-label" htmlFor={result}>{result}</label>
                                 </div>
                             </div>

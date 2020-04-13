@@ -5,7 +5,7 @@ const SelectedFilter = (props) =>  {
     return (
         <div className="selected-filters">
             <ul>
-                {props.list.map((item,index) => <li key={index}>{item.filter} <button id={item.filter} name={item.cat} className="btn btn-link p-0" onClick={props.updateFilter}>x</button></li>)}
+                {props.list.map((item,index) => <li key={index}>{item.filter} <button id={item.filter} name={item.cat} value={item.cat} className="btn btn-link p-0" onClick={props.updateFilter}>x</button></li>)}
             </ul>
         </div>
     )

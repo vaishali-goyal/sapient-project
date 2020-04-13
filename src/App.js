@@ -20,7 +20,8 @@ class App extends Component {
 
         species: {
             Human: false,
-            Alien: false
+            Alien: false,
+            Humanoid: false,
           },
           gender: {
             Male: false,
@@ -44,7 +45,7 @@ class App extends Component {
     let param = {};
     console.log('updatelist');
     this.state.selected.map((item) => 
-      param[item.cat] = item.filter.toLowerCase()
+      param[item.cat] = item.filter
     );
 
     console.log('param 1' + this.state.selected);
@@ -56,7 +57,7 @@ class App extends Component {
 
   getResults = (variable) => {
     axios.get('https://rickandmortyapi.com/api/character/', {
-      variables: variable
+        params: variable
     })
     .then((response) => {
       let result = this.sort(response.data.results);
@@ -108,17 +109,11 @@ class App extends Component {
      console.log('filteer');
     let categoryNew = { ...this.state[cat] };
     console.log('new cat ' + categoryNew)
-    if(e.target.checked){
-      for (let key in categoryNew) {
-        categoryNew[key] = false
-      }
-    }
-    categoryNew[filter] = !categoryNew[filter]; 
+    categoryNew[filter] = e.target.checked;
     let obj = {};
     obj[cat] = categoryNew;
     console.log('Obj ' + obj);
-    
-   // this.setState(obj,this.updateList);  
+    this.setState(obj,this.updateList);  
   };
 
  /* filterDropdown = this.results.filter(function(result) {
@@ -193,7 +188,7 @@ class App extends Component {
                                             <h3>Selected Filters</h3>
                                             { <SelectedFilters
                                                 list={this.state.selected}
-                                                updateFilter={this.state.updateFilter}
+                                                updateFilter={this.updateFilter}
                                             ></SelectedFilters> }
                                     </div>
                               </div>
